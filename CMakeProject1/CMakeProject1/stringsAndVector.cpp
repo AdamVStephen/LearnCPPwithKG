@@ -10,7 +10,16 @@
 // The following bombs on MS windows?
 //#include <wstring>
 // This is suggested instead.
+// See https://www.cqse.eu/en/blog/living-in-the-ifdef-hell/
+#ifdef _WIN32
 #include <corecrt_wstring.h>
+#elif __linux___
+#include <wstring>
+#else
+do not compile without a wstring implementation
+#endif
+
+//#include <corecrt_wstring.h>
 
 using namespace std;
 

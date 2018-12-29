@@ -1,7 +1,16 @@
 // TODO: Read https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
 #include <iostream>
 #include <string>
-#include <corecrt_wstring.h>
+
+// See https://www.cqse.eu/en/blog/living-in-the-ifdef-hell/
+#ifdef _WIN32
+	#include <corecrt_wstring.h>
+#elif __linux___
+	#include <wstring>
+#else
+	do not compile without a wstring implementation
+#endif
+
 #include <math.h>
 #include "joelOnUnicode.h"
 
