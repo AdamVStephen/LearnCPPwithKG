@@ -66,3 +66,33 @@ void hw_string_mandarin() {
 	}
 	cout << greeting << endl;
 }
+
+
+// Vector introduction follows / Collections.
+//
+// including operations such as sum, sort
+// and options to iterate over.
+//
+
+#include <vector> 
+#include <algorithm> // for sort and count
+
+void hw_vector_fib() {
+	vector<int> fib;
+	int last = 1;
+	fib.push_back(last);
+	fib.push_back(last);
+	for (int i = 2; i < 10; i++) {
+		last = fib[i - 1] + fib[i - 2];
+		fib.push_back(last);
+	}
+	cout << "Created a vector for fibonacci series of size " << fib.size() << "\n";
+	double dlast = fib[0];
+	for (auto element : fib) {
+		cout << element << " ";
+		double gratio = static_cast<double>(element) / dlast;
+		dlast = static_cast<double>(element);
+		cout << gratio << " ";
+	}
+}
+

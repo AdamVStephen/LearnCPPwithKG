@@ -11,6 +11,7 @@ int main(int argc, char * argv[])
 {
 	// use of the extraction operator
 	std::cout << "Hello CMake\n";
+	
 
 	// portability checks
 	showPortabilitySymbols();
@@ -45,6 +46,9 @@ int main(int argc, char * argv[])
 
 	// Unicode Exploration
 	basicDimensions();
+
+	// Vectors.
+	hw_vector_fib();
 
 	std::cout << "The End\n";
 	return 0;

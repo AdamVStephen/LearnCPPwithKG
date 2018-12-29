@@ -18,3 +18,7 @@ do not compile without a wstring implementation
 void savDemo();
 void hw_string();
 void hw_string_mandarin();
+
+// Vector examples
+
+void hw_vector_fib();
