@@ -13,6 +13,8 @@ cmake_minimum_required (VERSION 3.8)
 add_executable (main "main.cpp" 
 	"functions.cpp" "functions.h" 
 	"stringsAndVector.cpp" "stringsAndVector.h"
-	"joelOnUnicode.cpp" "joelOnUnicode.h")
+	"joelOnUnicode.cpp" "joelOnUnicode.h"
+	"portable.cpp" "portable.h"
+	)
 
 # TODO: Add tests and install targets if needed.

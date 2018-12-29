@@ -3,6 +3,7 @@
 #include "functions.h"
 #include "stringsAndVector.h"
 #include "joelOnUnicode.h"
+#include "portable.h"
 
 using namespace std;
 
@@ -10,6 +11,9 @@ int main(int argc, char * argv[])
 {
 	// use of the extraction operator
 	std::cout << "Hello CMake\n";
+
+	// portability checks
+	showPortabilitySymbols();
 
 	// call functions unit tests (todo - learn how to use proper CppUnit or Google Test or ...yadayada
 	// Note - throwing away the bool.
