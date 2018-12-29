@@ -36,7 +36,8 @@ void showPortabilitySymbols() {
 
 #include <string>
 #ifdef _WIN32
-#include <corecrt_wstring.h>
+// This is a red herring.   std::wstring is in <string> dummy !
+//#include <corecrt_wstring.h>
 #endif
 
 void showPortableUnicodeInfo() {
