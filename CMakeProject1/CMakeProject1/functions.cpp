@@ -33,9 +33,9 @@ bool ut_add_overflow() {
 	int imaxinc = add(imax, 1);
 	int imindec = sub(1, imin);
 	
-	cout << "sizeof(int) is " << sizeof(int);
-	cout << "INT_MAX is " << imax << " adding 1 gives " << imaxinc; 
-	cout << "INT_MIN is " << imin << " subtracting 1 gives " << imindec;
+	cout << "sizeof(int) is " << sizeof(int) << endl;
+	cout << "INT_MAX is " << imax << " adding 1 gives " << imaxinc << endl;
+	cout << "INT_MIN is " << imin << " subtracting 1 gives " << imindec << endl;
 
 	return true;
 }
