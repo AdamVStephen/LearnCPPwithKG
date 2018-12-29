@@ -33,3 +33,24 @@ void showPortabilitySymbols() {
 #endif
 
 }
+
+#include <string.h>
+
+void showPortableUnicodeInfo() {
+#if defined(linux) || defined(__linux__)
+    cout << "Unicode/Linux\n";
+    string s = "this is a string";
+    wstring w = L"this is a wstring which can include chinese 五白";
+    cout << "Here is a string: " << s << endl;
+    wcout << "Here is a wstring: " << w << endl;
+#elif defined(WIN32) || defined (_WIN32)
+    cout << "Unicode/Linux\n";
+    string s = "this is a string";
+    wstring w = "this is a wstring";
+    cout << "Here is a string: " << s << endl;
+    wcout << "Here is a wstring: " << w << endl;
+#else
+    do not compile
+#endif
+}
+
