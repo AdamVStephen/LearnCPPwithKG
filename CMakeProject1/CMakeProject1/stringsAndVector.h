@@ -5,7 +5,8 @@
 
 // See https://www.cqse.eu/en/blog/living-in-the-ifdef-hell/
 #ifdef _WIN32
-#include <corecrt_wstring.h>
+// This was wrong and unnecessary.
+//#include <corecrt_wstring.h>
 #elif defined(__linux___) || defined(linux)
 //#include <wstring>
 #else

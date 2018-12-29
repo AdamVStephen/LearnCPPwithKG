@@ -38,11 +38,19 @@ void hw_string() {
 	cin >> name;
 	string greeting = "Hello, " + name;
 	if (name == "Torin") {
-		greeting += ", I already told you that !";
+		greeting += "! I already told you that !";
 	} else {
-		greeting += ".  Hmmm.  Glad to meet you?";
+		greeting += "!  Hmmm.  Glad to meet you?";
 	}
 	cout << greeting << endl;
+
+	// Some more interesting stuff.
+	cout << "The greeting is " + to_string(greeting.length()) + "characters long\n";
+
+	auto space = greeting.find(' ');
+	auto ping = greeting.find('!');
+	string found_name = greeting.substr(space+1, (ping-space-1));
+	cout << "Pulled out >>" + found_name + "<< from the greeting\n";
 }
 
 void hw_string_mandarin() {
