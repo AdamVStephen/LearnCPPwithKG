@@ -34,7 +34,10 @@ void showPortabilitySymbols() {
 
 }
 
-#include <string.h>
+#include <string>
+#ifdef _WIN32
+#include <corecrt_wstring.h>
+#endif
 
 void showPortableUnicodeInfo() {
 #if defined(linux) || defined(__linux__)
@@ -46,7 +49,7 @@ void showPortableUnicodeInfo() {
 #elif defined(WIN32) || defined (_WIN32)
     cout << "Unicode/Linux\n";
     string s = "this is a string";
-    wstring w = "this is a wstring";
+    wstring w = L"this is a wstring";
     cout << "Here is a string: " << s << endl;
     wcout << "Here is a wstring: " << w << endl;
 #else
