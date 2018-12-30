@@ -96,3 +96,8 @@ void hw_vector_fib() {
 	}
 }
 
+// Demonstrate the difference in passing by reference/pointer/value.
+
+void hw_vector_passby_demo() {
+
+}

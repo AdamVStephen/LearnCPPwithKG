@@ -4,6 +4,7 @@
 #include "stringsAndVector.h"
 #include "joelOnUnicode.h"
 #include "portable.h"
+#include "passing.h"
 
 using namespace std;
 
@@ -49,6 +50,19 @@ int main(int argc, char * argv[])
 
 	// Vectors.
 	hw_vector_fib();
+
+	// Passing (also move/copy/assignment to come)
+	int theAnswer = 0;
+	printf("%s: initially theAnswer at %p has value %d\n", __func__, &theAnswer, theAnswer);
+	
+	passNativeByVal(theAnswer);
+	printf("%s: postByVal theAnswer at %p has value %d\n", __func__, &theAnswer, theAnswer);
+	
+	passNativeByRef(theAnswer);
+	printf("%s: postByRef theAnswer at %p has value %d\n", __func__, &theAnswer, theAnswer);
+	
+	passNativeByPtr(&theAnswer);
+	printf("%s: postByPtr theAnswer at %p has value %d\n", __func__, &theAnswer, theAnswer);
 
 	std::cout << "The End\n";
 	return 0;

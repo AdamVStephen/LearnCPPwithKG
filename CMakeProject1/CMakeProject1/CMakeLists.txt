@@ -15,6 +15,7 @@ add_executable (main "main.cpp"
 	"stringsAndVector.cpp" "stringsAndVector.h"
 	"joelOnUnicode.cpp" "joelOnUnicode.h"
 	"portable.cpp" "portable.h"
+	"passing.cpp" "passing.h"
 	)
 
 # TODO: Add tests and install targets if needed.
